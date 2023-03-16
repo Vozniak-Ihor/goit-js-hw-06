@@ -1,6 +1,6 @@
-'use strict'
+"use strict";
 
-// Напиши скрипт, який під час втрати фокусу на інпуті (подія blur), 
+// Напиши скрипт, який під час втрати фокусу на інпуті (подія blur),
 // перевіряє його вміст щодо правильної кількості введених символів.
 
 // <input
@@ -11,7 +11,7 @@
 // />
 
 // Яка кількість символів повинна бути в інпуті, зазначається в його атрибуті data-length.
-// Якщо введена правильна кількість символів, то border інпуту стає зеленим, 
+// Якщо введена правильна кількість символів, то border інпуту стає зеленим,
 // якщо неправильна кількість - червоним.
 // Для додавання стилів використовуй CSS-класи valid і invalid,
 //  які ми вже додали у вихідні файли завдання.
@@ -27,3 +27,13 @@
 // #validation-input.invalid {
 //   border-color: #f44336;
 // }
+
+const inputEl = document.querySelector("#validation-input");
+inputEl.addEventListener("blur", () => {
+  const inputLengthNow = inputEl.value.length;
+  const inputLengthValid = Number(inputEl.dataset.length);
+  if (inputLengthValid === inputLengthNow) {
+    inputEl.classList.add("valid");
+  }
+  inputEl.classList.add("invalid");
+});
