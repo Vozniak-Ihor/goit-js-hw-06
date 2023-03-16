@@ -34,4 +34,3 @@ const createGallerycListEl = images.map(({ url, alt }) =>
 
   galleryListEl.insertAdjacentHTML("afterBegin", createGallerycListEl)
 console.log(gallerycList)
-
