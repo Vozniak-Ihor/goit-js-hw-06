@@ -34,6 +34,11 @@ inputEl.addEventListener("blur", () => {
   const inputLengthValid = Number(inputEl.dataset.length);
   if (inputLengthValid === inputLengthNow) {
     inputEl.classList.add("valid");
+    inputEl.classList.remove("invalid");
+
+  } else{
+    inputEl.classList.add("invalid");
+    inputEl.classList.remove("valid");
   }
-  inputEl.classList.add("invalid");
+
 });
