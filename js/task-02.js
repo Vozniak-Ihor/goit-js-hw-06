@@ -1,5 +1,3 @@
-"use strict";
-
 // JavaScript містить масив рядків.
 
 // const ingredients = [
@@ -27,36 +25,11 @@ const ingredients = [
   "Condiments",
 ];
 
-const ingredientPotatoesEl = document.createElement("li");
-ingredientPotatoesEl.textContent = ingredients[0];
-ingredientPotatoesEl.classList.add("item");
+for (const ingredient of ingredients) {
+  const ingredientsEl = document.createElement("li");
+  ingredientsEl.textContent = ingredient;
+  ingredientsEl.classList.add("item");
+  const pushIngredientsEl = document.querySelector("#ingredients");
+  pushIngredientsEl.append(ingredientsEl)
+}
 
-const ingredientMushroomsEl = document.createElement("li");
-ingredientMushroomsEl.textContent = ingredients[1];
-ingredientMushroomsEl.classList.add("item");
-
-const ingredientGarlicEl = document.createElement("li");
-ingredientGarlicEl.textContent = ingredients[2];
-ingredientGarlicEl.classList.add("item");
-
-const ingredientTomatosEl = document.createElement("li");
-ingredientTomatosEl.textContent = ingredients[3];
-ingredientTomatosEl.classList.add("item");
-
-const ingredientHerbsEl = document.createElement("li");
-ingredientHerbsEl.textContent = ingredients[4];
-ingredientHerbsEl.classList.add("item");
-
-const ingredientCondimentsEl = document.createElement("li");
-ingredientCondimentsEl.textContent = ingredients[5];
-ingredientCondimentsEl.classList.add("item");
-
-const pushBodyUlIngredientsEl = document.querySelector("#ingredients");
-pushBodyUlIngredientsEl.append(
-  ingredientPotatoesEl,
-  ingredientMushroomsEl,
-  ingredientGarlicEl,
-  ingredientTomatosEl,
-  ingredientHerbsEl,
-  ingredientCondimentsEl
-);

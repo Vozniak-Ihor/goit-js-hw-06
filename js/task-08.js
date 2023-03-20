@@ -32,8 +32,8 @@ loginForm.addEventListener("submit", (event) => {
     return alert("Please enter a password!");
   }
   const dataWhihForm = {};
-  dataWhihForm.email = `${loginForm.elements.email.value}`
-  dataWhihForm.password = loginForm.elements.password.value
+  dataWhihForm.email = loginForm.elements.email.value;
+  dataWhihForm.password = loginForm.elements.password.value;
+  loginForm.reset();
   console.log(dataWhihForm);
 });
-

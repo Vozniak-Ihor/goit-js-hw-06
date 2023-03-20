@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 // Напиши скрипт, який під час набору тексту в інпуті input#name-input (подія input),
 //  підставляє його поточне значення в span#name-output. Якщо інпут порожній,
@@ -9,9 +9,12 @@
 
 const textInput = document.querySelector("#name-input");
 // console.log(textInput);
-const output = document.querySelector("#name-output")
-// console.log(output);
+const output = document.querySelector("#name-output");
+console.log(output);
 
 textInput.addEventListener("input", (event) => {
-        output.textContent = event.currentTarget.value;
+  if (event.currentTarget.value === "") {
+    return (output.textContent = "Anonymous");
+  }
+  output.textContent = event.currentTarget.value;
 });
